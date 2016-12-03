@@ -6,5 +6,5 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($timeout) {}
+  function MainController() {}
 })();
