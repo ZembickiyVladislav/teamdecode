@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'SFUIText-Regular';
+  src: local('SFUIText-Regular'), url('http://nomail.com.ua/files/woff/888e0f3f1d925d57beaf9cc4a7b80dbc.woff') format('woff');
+}
+@font-face {
+  font-family: 'SFUIText-Bold';
+  src: local('SFUIText-Bold'), url('http://nomail.com.ua/files/woff/8ce3beca87df9f72c93ffc5982450177.woff') format('woff');
+}
+@font-face {
+  font-family: 'SFUIText-Semibold';
+  src: local('SFUIText-Semibold'), url('http://nomail.com.ua/files/woff/4ad14afa2ef93e5f26cd9f07775ff8ba.woff') format('woff');
+}
+
+%sfuitextregular {
+  font-family: 'SFUIText-Regular';
+}
+
+%sfuitextbold {
+  font-family: 'SFUIText-Bold';
+}
+
+%sfuitextsemibold {
+  font-family: 'SFUIText-Semibold';
+}
+
+html {
+  @extend %sfuitextregular;
+}
