@@ -7,7 +7,7 @@
     .factory('teamdecodeApi', teamdecodeApi);
 
   /** @ngInject */
-  function teamdecodeApi($http, $q) {
+  function teamdecodeApi() {
     function getUserInfo() {
       return {
         "Account": {
@@ -16,8 +16,6 @@
         }
       }
     }
-
-    function logOut() {}
 
     function getProjects() {
       return {
@@ -49,10 +47,87 @@
       }
     }
 
+    function getTasks() {
+      return {
+        "tasks": [{
+          "Task": {
+            "id": "1918",
+            "title": "Some title",
+            "description": null,
+            "created_at": "2016-12-04 19:27:50"
+          }
+        }, {
+          "Task": {
+            "id": "1917",
+            "title": "Some title",
+            "description": null,
+            "created_at": "2016-12-04 19:27:45"
+          }
+        }, {
+          "Task": {
+            "id": "1916",
+            "title": "Some title",
+            "description": null,
+            "created_at": "2016-12-04 19:27:41"
+          }
+        }, {
+          "Task": {
+            "id": "1915",
+            "title": "Some title",
+            "description": null,
+            "created_at": "2016-12-04 19:27:30"
+          }
+        }, {
+          "Task": {
+            "id": "1914",
+            "title": "Some title",
+            "description": null,
+            "created_at": "2016-12-04 19:27:26"
+          }
+        }, {
+          "Task": {
+            "id": "1913",
+            "title": "Some title",
+            "description": null,
+            "created_at": "2016-12-04 19:27:22"
+          }
+        }, {
+          "Task": {
+            "id": "1912",
+            "title": "Some title",
+            "description": null,
+            "created_at": "2016-12-04 19:27:18"
+          }
+        }, {
+          "Task": {
+            "id": "1911",
+            "title": "Some title",
+            "description": null,
+            "created_at": "2016-12-04 19:27:15"
+          }
+        }, {
+          "Task": {
+            "id": "1910",
+            "title": "Some title",
+            "description": null,
+            "created_at": "2016-12-04 19:27:10"
+          }
+        }, {
+          "Task": {
+            "id": "1909",
+            "title": "Some title",
+            "description": null,
+            "created_at": "2016-12-04 19:27:07"
+          }
+        }],
+        "total_count": 24
+      }
+    }
+
     return {
       getUserInfo: getUserInfo,
-      logOut: logOut,
-      getProjects: getProjects
+      getProjects: getProjects,
+      getTasks: getTasks
     }
   }
 
