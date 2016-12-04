@@ -1,4 +1,4 @@
-md-sidenav.md-sidenav-right.md-whiteframe-4dp(md-component-id='createProject')
+md-sidenav.md-sidenav-right.md-whiteframe-4dp(md-component-id='taskDetails')
   md-toolbar.md-theme-light
     h1.md-toolbar-tools Sidenav Right
   md-content.layout-padding
@@ -6,5 +6,6 @@ md-sidenav.md-sidenav-right.md-whiteframe-4dp(md-component-id='createProject')
       md-input-container
         label(for='testInput') Test input
         input#testInput(type='text', ng-model='data', md-autofocus='')
-    md-button.md-primary(ng-click='$root.createProject.closeSideBar()')
+    md-button.md-primary(ng-click='$root.taskDetails.closeSideBar()')
       | Close Sidenav Right
+    fo {{$root.taskDetails.closeSideBar}}

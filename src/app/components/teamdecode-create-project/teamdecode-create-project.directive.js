@@ -17,8 +17,9 @@
     /** @ngInject */
     function createProjectLink(scope) {
       $rootScope.createProject = {
-        toggleSideBar: $mdSidenav('createProject').toggle,
-        isOpen: $mdSidenav('createProject').isOpen
+        openSideBar: $mdSidenav('createProject').open,
+        isOpen: $mdSidenav('createProject').isOpen,
+        closeSideBar: $mdSidenav('createProject').close
       }
     }
   }
