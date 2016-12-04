@@ -6,19 +6,21 @@
     .directive('teamdecodeCreateProject', teamdecodeCreateProject);
 
   /** @ngInject */
-  function teamdecodeCreateProject() {
+  function teamdecodeCreateProject($mdSidenav, $rootScope) {
     return {
-      restrict: 'E',
       templateUrl: 'app/components/teamdecode-create-project/teamdecode-create-project.html',
-      scope: {
-          creationDate: '='
-      },
-      controller: CreateProjectController,
-      controllerAs: 'createProject'
+      transclude: true,
+      replace: true,
+      link: createProjectLink
     };
 
     /** @ngInject */
-    function CreateProjectController() {}
+    function createProjectLink(scope) {
+      $rootScope.createProject = {
+        toggleSideBar: $mdSidenav('createProject').toggle,
+        isOpen: $mdSidenav('createProject').isOpen
+      }
+    }
   }
 
 })();

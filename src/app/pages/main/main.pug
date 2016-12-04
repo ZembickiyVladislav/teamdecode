@@ -3,7 +3,7 @@
     teamdecode-user-info
     .create-project
       h5.create-project__title lorem
-      span.create-project__icon(ng-click="")
+      span.create-project__icon(ng-click="$root.createProject.toggleSideBar()") open create project side bar
     teamdecode-project-list
     span Log out
   md-content.layout-row.layout-fill.layout-align-center-start.layout-wrap
@@ -12,3 +12,4 @@
       md-button.md-no-ink.md-icon-button
         md-icon.icons8-more
     teamdecode-task-list
+    teamdecode-create-project
