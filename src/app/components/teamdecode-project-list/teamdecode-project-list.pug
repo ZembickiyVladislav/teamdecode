@@ -1,1 +1,5 @@
-
+ul.project-list
+  li.project-list__item(ng-repeat="project in projects")
+    .list-item
+      span.list-item__title {{project.Project.title}}
+      span.list-item__task-count {{project.Project.task_count}}

@@ -6,20 +6,15 @@
     .directive('teamdecodeUserInfo', teamdecodeUserInfo);
 
   /** @ngInject */
-  function teamdecodeUserInfo() {
+  function teamdecodeUserInfo(teamdecodeApi) {
     return {
-      restrict: 'E',
       templateUrl: 'app/components/teamdecode-user-info/teamdecode-user-info.html',
-      scope: {
-          creationDate: '='
-      },
-      controller: UserInfoController,
-      controllerAs: 'userInfo',
-      bindToController: true
+      link: userInfoLink
     };
 
-    /** @ngInject */
-    function UserInfoController() {}
+    function userInfoLink(scope, elem) {
+      scope.account = teamdecodeApi.getUserInfo().Account;
+    }
   }
 
 })();

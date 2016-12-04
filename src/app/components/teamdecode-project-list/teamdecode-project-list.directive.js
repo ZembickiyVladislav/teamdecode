@@ -6,19 +6,16 @@
     .directive('teamdecodeProjectList', teamdecodeProjectList);
 
   /** @ngInject */
-  function teamdecodeProjectList() {
+  function teamdecodeProjectList(teamdecodeApi) {
     return {
-      restrict: 'E',
       templateUrl: 'app/components/teamdecode-project-list/teamdecode-project-list.html',
-      scope: {
-          creationDate: '='
-      },
-      controller: ProjectListController,
-      controllerAs: 'projectList'
+      link: projectListLink
     };
 
     /** @ngInject */
-    function ProjectListController() {}
+    function projectListLink(scope) {
+      scope.projects = teamdecodeApi.getProjects().projects;
+    }
   }
 
 })();
