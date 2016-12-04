@@ -6,19 +6,20 @@
     .directive('teamdecodeCreateTask', teamdecodeCreateTask);
 
   /** @ngInject */
-  function teamdecodeCreateTask() {
+  function teamdecodeCreateTask($rootScope, $mdSidenav) {
     return {
-      restrict: 'E',
       templateUrl: 'app/components/teamdecode-create-task/teamdecode-create-task.html',
-      scope: {
-          creationDate: '='
-      },
-      controller: CreateTaskController,
-      controllerAs: 'createTask'
+      link: createTaskLink
     };
 
     /** @ngInject */
-    function CreateTaskController() {}
+    function createTaskLink(scope) {
+      $rootScope.createTask = {
+        openSideBar: $mdSidenav('createTask').open,
+        isOpen: $mdSidenav('createTask').isOpen,
+        closeSideBar: $mdSidenav('createTask').close
+      }
+    }
   }
 
 })();

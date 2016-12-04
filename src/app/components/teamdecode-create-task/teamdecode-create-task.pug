@@ -1,1 +1,10 @@
-
+md-sidenav.md-sidenav-right.md-whiteframe-4dp(md-component-id='createTask')
+  md-toolbar.md-theme-light
+    h1.md-toolbar-tools Sidenav Right
+  md-content.layout-padding
+    form
+      md-input-container
+        label(for='testInput') Test input
+        input#testInput(type='text', ng-model='data', md-autofocus='')
+    md-button.md-primary(ng-click='$root.createTask.closeSideBar()')
+      | Close Sidenav Right 
