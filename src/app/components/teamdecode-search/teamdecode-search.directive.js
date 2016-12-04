@@ -8,17 +8,12 @@
   /** @ngInject */
   function teamdecodeSearch() {
     return {
-      restrict: 'E',
       templateUrl: 'app/components/teamdecode-search/teamdecode-search.html',
-      scope: {
-          creationDate: '='
-      },
-      controller: SearchController,
-      controllerAs: 'search'
+      link: SearchLink,
     };
 
     /** @ngInject */
-    function SearchController() {}
+    function SearchLink() {}
   }
 
 })();
