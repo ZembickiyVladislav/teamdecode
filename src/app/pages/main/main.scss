@@ -1,0 +1,63 @@
+.page--main {
+  background-color: $base-background-color;
+
+  .sidenav--main {
+    width: 343px;
+    padding: 20px 30px;
+    background-color: $base-subnav-background-color;
+
+    .create-project {
+      padding: 0 10px;
+      margin-top: 26px;
+      color: $create-project;
+      font-size: 12px;
+      min-height: 41px;
+
+      &__icon {
+        cursor: pointer;
+
+        &:before {
+          font-size: 17px;
+          width: 13px;
+        }
+      }
+
+      &__title {
+        font-weight: 600;
+        line-height: 28px;
+      }
+    }
+  }
+
+  .toolbar--main {
+    background-color: $base-background-color;
+    border-bottom: 1px solid $top-panel-bottom-line;
+    min-height: 49px;
+  }
+
+  .toolbar {
+    &__project-actions {
+      .icons8-more {
+        font-size: 24px;
+        color: $toolbar-project-actions-icon;
+      }
+    }
+  }
+
+  .content--main {
+    background-color: $base-background-color;
+  }
+
+  .log-out {
+    margin-top: auto;
+
+    span {
+      cursor: pointer;
+      color: $log-out-text;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 28px;
+      padding: 0 10px;
+    }
+  }
+}

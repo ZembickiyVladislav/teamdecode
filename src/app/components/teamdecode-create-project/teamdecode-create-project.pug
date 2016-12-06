@@ -1,10 +1,11 @@
-md-sidenav.md-sidenav-right.md-whiteframe-4dp(md-component-id='createProject')
-  md-toolbar.md-theme-light
-    h1.md-toolbar-tools Sidenav Right
+md-sidenav.sidenav--create-project.md-sidenav-right.md-whiteframe-4dp(md-component-id='createProject')
+  md-toolbar.layout-row.layout-align-space-between-center
+    md-wrap.button--create-project-close
+      md-button.md-no-ink.md-icon-button(ng-click='$root.createProject.closeSideBar()')
+        md-icon.icons8-delete-2
+    h1.md-toolbar-tools.layout-align-center-center.toolbar--create-project-title Create new project
   md-content.layout-padding
-    form
-      md-input-container
-        label(for='testInput') Test input
+    form.layout-row.layout-align-center-center
+      md-input-container.input-container--create-project
+        label(for='testInput') Project name
         input#testInput(type='text', ng-model='data', md-autofocus='')
-    md-button.md-primary(ng-click='$root.createProject.closeSideBar()')
-      | Close Sidenav Right

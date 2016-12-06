@@ -1,10 +1,15 @@
-md-sidenav.md-sidenav-right.md-whiteframe-4dp(md-component-id='taskDetails')
-  md-toolbar.md-theme-light
-    h1.md-toolbar-tools Sidenav Right
+md-sidenav.sidenav--task-details.md-sidenav-right.md-whiteframe-4dp(md-component-id='taskDetails')
+  md-toolbar.layout-row.layout-align-space-between-center
+    md-wrap.button--task-details-close
+      md-button.md-no-ink.md-icon-button(ng-click='$root.taskDetails.closeSideBar()')
+        md-icon.icons8-delete-2
+    h1.md-toolbar-tools.layout-align-center-center.toolbar--task-details-title Call in barber shop
+    md-wrap.button--task-details-edit
+      md-button.md-no-ink.md-icon-button(ng-click='$root.taskDetails.closeSideBar()')
+        md-icon.icons8-edit
+    md-wrap.button--task-details-delate
+      md-button.md-no-ink.md-icon-button(ng-click='$root.taskDetails.closeSideBar()')
+        md-icon.icons8-delete
   md-content.layout-padding
-    form
-      md-input-container
-        label(for='testInput') Test input
-        input#testInput(type='text', ng-model='data', md-autofocus='')
-    md-button.md-primary(ng-click='$root.taskDetails.closeSideBar()')
-      | Close Sidenav Right
+    .task-details-content
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

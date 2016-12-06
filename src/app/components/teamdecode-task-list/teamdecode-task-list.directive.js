@@ -14,7 +14,14 @@
 
     /** @ngInject */
     function taskListLink(scope) {
-      scope.tasks = teamdecodeApi.getTasks().tasks;
+      var tasksTimeGroup = {};
+      teamdecodeApi.getTasks().tasks.forEach(function (item) {
+        var id = item.Task.created_at.split(' ')[0];
+        tasksTimeGroup[id]
+          ? tasksTimeGroup[id].push(item.Task)
+          : tasksTimeGroup[id] = [item.Task];
+      });
+      scope.tasksTimeGroup = tasksTimeGroup;
     }
   }
 

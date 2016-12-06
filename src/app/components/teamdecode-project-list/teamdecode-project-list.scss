@@ -1,0 +1,27 @@
+.project-list {
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    padding: 0;
+  }
+
+  .list-item {
+    min-height: 41px;
+    border-radius: 5px;
+    padding: 0 10px;
+    color: $project-list-item-text;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 28px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $project-list;
+    }
+
+    &__title {}
+
+    &__task-count {}
+  }
+}

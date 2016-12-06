@@ -1,0 +1,59 @@
+md-sidenav.sidenav--create-task {
+  width: 500px;
+  background-color: $create-task-background-color;
+
+  md-content {
+    background-color: $create-task-background-color;
+  }
+
+  md-toolbar:not(.md-menu-toolbar){
+    background-color: $create-task-toolbar;
+  }
+
+  .input-container--create-task {
+    width: 100%;
+    max-width: 342px;
+
+    &:not(.md-input-invalid).md-input-focused .md-input {
+      border-color: $create-task-input-border;
+    }
+
+    input {
+      border-color: $create-task-input-border;
+      color: $create-task-input-color;
+    }
+
+    label {
+      color: $create-task-input-color;
+    }
+  }
+
+  .button--create-task-close {
+    position: absolute;
+
+    &:after {
+      content: "ESC";
+      display: block;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%);
+      bottom: 2px;
+      font-size: 9px;
+    }
+
+    .icons8-delete-2:before {
+      font-size: 23px;
+    }
+  }
+
+  .toolbar--create-task-title {
+    padding-left: 40px;
+    padding-right: 74px;
+    padding-top: 5px;
+  }
+}
+@media screen and (min-width: 600px) {
+  md-sidenav.sidenav--create-task {
+    max-width: 500px;
+  }
+}

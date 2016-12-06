@@ -1,17 +1,18 @@
 .page.page--main.layout-row.layout-fill
-  md-sidenav(md-is-locked-open="true")
+  md-sidenav.sidenav--main(md-is-locked-open="true")
     teamdecode-user-info
-    .create-project
-      h5.create-project__title lorem
-      span.create-project__icon(ng-click="$root.createProject.openSideBar()") open create project side bar
+    .create-project.layout-row.layout-align-space-between-center
+      span.create-project__title Projects
+      span.create-project__icon.icons8-plus(ng-click="$root.createProject.openSideBar()")
     teamdecode-project-list
     span(ng-click="$root.taskDetails.openSideBar()") taskDetails openSideBar
     span(ng-click="$root.createTask.openSideBar()") createTask openSideBar
-    span Log out
-  md-content.layout-row.layout-fill.layout-align-center-start.layout-wrap
-    md-toolbar.layout-row.layout-align-space-between-center
+    .log-out
+      span Log out
+  md-content.content--main.layout-row.layout-fill.layout-align-center-start.layout-wrap
+    md-toolbar.toolbar.toolbar--main.layout-row.layout-align-space-between-center
       teamdecode-search
-      md-button.md-no-ink.md-icon-button
+      md-button.toolbar__project-actions.md-no-ink.md-icon-button
         md-icon.icons8-more
     teamdecode-task-list
     teamdecode-create-project

@@ -1,10 +1,14 @@
-md-sidenav.md-sidenav-right.md-whiteframe-4dp(md-component-id='createTask')
-  md-toolbar.md-theme-light
-    h1.md-toolbar-tools Sidenav Right
+md-sidenav.sidenav--create-task.md-sidenav-right.md-whiteframe-4dp(md-component-id='createTask')
+  md-toolbar.layout-row.layout-align-space-between-center
+    md-wrap.button--create-task-close
+      md-button.md-no-ink.md-icon-button(ng-click='$root.createTask.closeSideBar()')
+        md-icon.icons8-delete-2
+    h1.md-toolbar-tools.layout-align-center-center.toolbar--create-task-title Create new task
   md-content.layout-padding
-    form
-      md-input-container
-        label(for='testInput') Test input
+    form.layout-row.layout-align-center-center.layout-wrap
+      md-input-container.input-container--create-task
+        label(for='testInput') Task name
         input#testInput(type='text', ng-model='data', md-autofocus='')
-    md-button.md-primary(ng-click='$root.createTask.closeSideBar()')
-      | Close Sidenav Right 
+      md-input-container.input-container--create-task
+        label(for='testInput') Description
+        input#testInput(type='text', ng-model='data', md-autofocus='')

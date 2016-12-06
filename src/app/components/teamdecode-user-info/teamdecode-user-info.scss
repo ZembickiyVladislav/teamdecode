@@ -1,8 +1,18 @@
 .user-info {
+  padding: 0 4px;
   &__avatar {
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
+    padding: 2px;
+    border: 1px solid $avatar-border;
+    border-radius: 50%;
+    margin-right: 20px;
   }
 
-  &__name {}
+  &__name {
+    color: $avatar-name-text;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 28px;
+  }
 }

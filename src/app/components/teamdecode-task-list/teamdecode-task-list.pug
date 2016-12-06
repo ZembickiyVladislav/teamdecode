@@ -1,5 +1,8 @@
-md-list
-  md-list-item.md-2-line(ng-repeat='task in tasks')
-    md-checkbox(ng-model='task.done')
-    .md-list-item-text
-      h3 {{task.Task.title}}
+md-content
+  md-list(ng-repeat='tasks in tasksTimeGroup')
+    md-subheader.md-no-sticky 3 line item (dense)
+    md-content(md-whiteframe="15")
+      .task.layout-row.layout-align-space-between-center(ng-repeat='task in tasks')
+        md-checkbox(aria-label="Checkbox No Ink" ng-model='task.done')
+        .md-list-item-text(layout='column')
+          p item.what

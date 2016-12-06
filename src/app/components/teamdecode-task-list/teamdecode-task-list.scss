@@ -1,0 +1,60 @@
+teamdecode-task-list {
+  height: calc(100% - 49px);
+  overflow-y: scroll;
+  width: 100%;
+
+  md-content {
+    border-radius: 5px;
+    background-color: transparent;
+  }
+
+  md-list {
+    max-width: 573px;
+    margin: auto;
+
+    .md-subheader {
+      background-color: transparent;
+
+      .md-subheader-inner {
+        padding: 5px 0 5px 10px;
+      }
+    }
+  }
+
+  .task {
+    padding-right: 5px;
+
+    md-checkbox {
+      margin: 0 52px 0 33px;
+
+      .md-icon {
+        background-color: transparent;
+        border: 2px solid $teamdecode-task-list-checbox;
+        border-radius: 50%;
+        overflow: hidden;
+
+        &:after {
+          background-color: $teamdecode-task-list-checbox;
+          left: -1px;
+          right: 0;
+          top: -1px;
+          bottom: 0;
+          width: 120%;
+          height: 120%;
+          border-color: $teamdecode-task-list-checbox;
+        }
+      }
+    }
+
+    .md-list-item-text {
+      margin-right: auto;
+
+      p {
+        color: $teamdecode-task-list-task-text;
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 28px;
+      }
+    }
+  }
+}
